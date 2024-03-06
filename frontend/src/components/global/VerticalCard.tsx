@@ -60,7 +60,7 @@ const VerticalCard = ({ data }: IProps) => {
                                 />
                             </div>
                             <p className="text-gray-400  text-sm ">
-                                Published:{" "}
+                               Pubblicato:{" "}
                                 <span className="font-semibold">
                                     {addedDate}
                                 </span>

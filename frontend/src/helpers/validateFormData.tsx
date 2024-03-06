@@ -59,16 +59,16 @@ export const validateUserLoginForm = (values: LoginFormData) => {
 export const validateStoryUploadForm = (values: StoryForm) => {
     const errors = {} as StoryFormError;
     if (!values.title) {
-        errors.titleError = "Title is required!";
+        errors.titleError = "Titolo richiesto!";
     } else if (values.title.length < 5 || values.title.length > 150) {
         errors.titleError =
-            "Title size must be min 5 chars and max is 150 chars";
+            "Il Titolo deve contenere dai 5 ai 50 caratteri";
     }
     if (!values.content) {
-        errors.contentError = "Description is required!";
+        errors.contentError = "Descrizione richiesta!";
     } else if (values.content.length < 5 || values.content.length > 10000) {
         errors.contentError =
-            "Content size must be min 5 chars and max is 10000 chars";
+            "Il contenuto deve contenere dai 5 ai 10000 caratteri";
     }
 
     return errors;

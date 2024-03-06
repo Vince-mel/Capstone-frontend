@@ -21,7 +21,7 @@ export const CATEGORY = "/category";
 export const CATEGORYDASH = "/categorylist"
 export const USERS = "/users";
 export const ADD_CATEGORY = "/add-category";
-
+export const ACTIVITY = "/activity"
 export const UNAUTHORIZED = "/unauthorized";
 
 export const links = [
@@ -32,12 +32,12 @@ export const links = [
     },
     {
         id: 3,
-        label: "Login",
+        label: "Accedi",
         link: LOGIN,
     },
     {
         id: 4,
-        label: "Signup",
+        label: "Registrati",
         link: REGISTRATION,
     },
 ];
@@ -49,7 +49,7 @@ export const authLinks = [
     },
     {
         id: 2,
-        label: "Write",
+        label: "Scrivi",
         link: WRITE,
     },
 ];
@@ -64,21 +64,21 @@ export const menuLinks = [
     },
     {
         id: 2,
-        label: "Add Category",
+        label: "Aggiungi Categoria",
         link: ADD_CATEGORY,
         isAdmin: true,
         icon: BsListTask,
     },
     {
         id: 3,
-        label: "Profile",
+        label: "Profilo",
         link: PROFILE,
         icon: CgProfile,
         isAdmin: false,
     },
     {
         id: 4,
-        label: "Users",
+        label: "Utente",
         link: USERS,
         icon: FiUsers,
         isAdmin: true,
@@ -106,6 +106,7 @@ export const UPDATE_POST_ENDPOINT = "/api/posts";
 export const GET_POST_BY_CATEGORY_ENDPOINT = "/api/category";
 export const BLOG_IMAGE_ENDPOINT = BASE_URL + "/api/post/image/";
 export const CATEGORY_ENDPOINT = "/api/category/";
+
 
 // USER ROLE
 export const ROLE_ADMIN = "ROLE_ADMIN";

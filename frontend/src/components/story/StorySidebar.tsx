@@ -34,8 +34,8 @@ export const StorySidebar = ({ data: user }: IProps) => {
         showUserInfo = (
             <>
                 <AuthorInfo data={user?.users} />
-                <h2 className="text-2xl font-semibold mt-16 my-4">
-                    <span className="text-gray-600">More from </span>
+                <h2 className="text-2xl font-semibold mt-20 my-4">
+                    <span className="text-gray-600">Altro da  </span>
                     <span>{`@${user?.users.name}`}</span>
                 </h2>
             </>

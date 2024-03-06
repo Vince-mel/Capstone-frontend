@@ -84,7 +84,7 @@ const AddCategory = () => {
                                 message={formError.catName}
                                 label="Name"
                                 name="name"
-                                placeholder="Enter Category Name"
+                                placeholder="Inserisci il nome della Categoria"
                                 value={catName}
                             />
                             <Textarea

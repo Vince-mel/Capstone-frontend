@@ -61,7 +61,7 @@ const Category = () => {
         if (Number(catId)) {
             fetchData();
         } else {
-            setError("No Post Found");
+            setError("Nessun Articolo trovato");
         }
     }, [catId]);
 

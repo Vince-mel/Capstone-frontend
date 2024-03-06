@@ -25,7 +25,7 @@ export const createUserSignup = createAsyncThunk(
     }
 );
 const registrationSlice = createSlice({
-    name: "registration",
+    name: "registrazione",
     initialState,
     reducers: {},
     extraReducers: (builder) => {

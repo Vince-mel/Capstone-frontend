@@ -24,6 +24,7 @@ import {
     USERS,
     WRITE,
     CATEGORYDASH,
+    ACTIVITY,
 } from "./constants/routes";
 import useAuth from "./hooks/useAuth";
 import AddCategory from "./pages/admin/AddCategory";
@@ -41,6 +42,7 @@ import Write from "./pages/write";
 import PrivateOutlet from "./routes/PrivateOutlet";
 import PublicOutlet from "./routes/PublicOutlet";
 import CategoryList from "./pages/admin/CategoryList";
+import Activity from "./pages/admin/Activity";
 
 function App() {
     const checkAuth = useAuth();
@@ -95,7 +97,11 @@ function App() {
                             />
                             <Route path={USERS} element={<UsersList />} />
                             <Route path={DASHBOARD} element={<Dashboard />} />
-                            <Route path={CATEGORYDASH} element={<CategoryList />} />
+                            <Route path={CATEGORYDASH} element={<CategoryList />}/>
+                            <Route path={ACTIVITY} element={<Activity/>}/>
+                            
+
+                                                                                
                         </Route>
 
                         <Route path={UNAUTHORIZED} element={<UnAuthorized />} />
