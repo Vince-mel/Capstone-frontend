@@ -44,7 +44,7 @@ const Navbar = () => {
                         : " backdrop-blur-xl  top-2 left-0 right-0 bg-gray-700 z-10"
                 }
             >
-                <div className="flex px-4 md:px-8 justify-between items-center  py-3 sm:container mx-auto  ">
+                <div className="flex px-4 md:px-8 justify-between items-center  sm:container mx-auto  ">
                     <div>
                         <Link to={HOME}>
                             <div>

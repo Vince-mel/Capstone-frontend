@@ -10,6 +10,10 @@ import { SEARCH_POST_ENDPOINT } from "../../constants/routes";
 import { Post } from "../../types/types";
 import axios from "../../utils/axiosInstance";
 import Sidebar from "../../components/global/Sidebar";
+import Footer from "../../components/global/footer";
+
+
+
 const Search = () => {
     const { search } = useLocation();
     const query = search.slice(1);
@@ -71,17 +75,21 @@ const Search = () => {
     }
     return (
         <Container>
-            <div className="pt-24 md:w-9/12">
-                <div className="border-b-2 border-gray-400  mb-16">
-                    <Title
-                        title={`Results for "${query
-                            .split("=")[1]
-                            .replaceAll("+", " ")}"`}
-                    />
-                </div>
-                <div className="pt-18">{showSearchedPost}</div>
+           <div className="flex flex-col items-center min-h-screen">
+            <div className="pt-24 w-full mb-10 md:w-9/12">
+            <div className="border-b-2 text-center border-gray-400 mb-16">
+            <Title
+          title={`Risultati per "${query.split("=")[1].replaceAll("+", " ")}"`}
+                />
             </div>
-             <Sidebar/> 
+            <div className="pt-18">{showSearchedPost}</div>
+                </div>
+
+                <Sidebar/> 
+                
+                </div>
+                <Footer/>
+             
         </Container>
     );
 };
