@@ -6,7 +6,11 @@
 The Waystone is a blog app for all those who want to feel part of a community where they can review and give advice by sharing opinions on everything related to the nerd universe, but especially the fantasy genre.
 
 Client tecnology: Typescript, React and Redux
+
+
 Key Features:
+
+
 User Registration: Create a personal account to access all the app's features and keep track of your posts and profile.
 
 Posts: Write and update your post and upload an image
