@@ -16,11 +16,11 @@ const Pagination = ({
             <ReactPaginate
            
                 breakLabel="..."
-                nextLabel="next"
+                nextLabel="avanti "
                 onPageChange={onClick}
                 pageRangeDisplayed={4}
                 pageCount={pageCount}
-                previousLabel="prev"
+                previousLabel="indietro"
                 activeClassName="bg-gray-700 font-bold text-white "
                 pageLinkClassName="px-4 py-2 "
                 nextLinkClassName={

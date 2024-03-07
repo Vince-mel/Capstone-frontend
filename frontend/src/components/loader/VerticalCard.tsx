@@ -1,6 +1,6 @@
 const VerticalLoader = () => {
     return (
-        <div className="border border-gray-300 bg-gray-50 shadow rounded-md ">
+        <div className="border  border-gray-300 bg-gray-50 shadow rounded-md ">
             <div className=" animate-pulse bg-gray-200 h-[200px] sm:h-[300px]   rounded-lg " />
 
             <div className=" px-3 pt-4 pb-2">

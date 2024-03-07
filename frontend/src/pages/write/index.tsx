@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import StoryEditor from "../../components/editor/StoryEditor";
+import { useNavigate } from 'react-router-dom';
+
 import Button from "../../components/global/Button";
 import Container from "../../components/global/Container";
 import Input from "../../components/global/Input";
@@ -22,6 +24,8 @@ import { selectAuth } from "../../redux/features/login/loginSlice";
 import { StoryFormError } from "../../types/types";
 import axios from "../../utils/axiosInstance";
 
+
+
 const Write = () => {
     const { categories, error, isError, isLoading } =
         useAppSelector(selectCategory);
@@ -30,6 +34,7 @@ const Write = () => {
     const [categoryId, setCategoryId] = useState<null | string | number>(null);
     const [storyImage, setStoryImage] = useState(null);
     const [preview, setPreview] = useState<string>("");
+    const navigate = useNavigate();
 
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
@@ -75,38 +80,35 @@ const Write = () => {
         showCategories = <Message message={"Categories not available"} />;
 
     /* @DESC::  handle post */
-    const handlePublishPost = async (
-        e: React.MouseEvent<HTMLButtonElement>
-    ) => {
+    const handlePublishPost = async (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
-
+        
+    
         const getValidData = validateStoryUploadForm({ title, content });
         setFormError(getValidData);
-
+    
         if (Object.keys(getValidData).length === 0 && categoryId !== null) {
             try {
                 setPostError("");
                 setPostLoading(true);
                 const res = await axios.post(
                     `${CREATE_POST_ENDPOINT}/${user?.id}/category/${categoryId}/posts`,
-
                     JSON.stringify({
                         title: title,
                         content: content,
                         imageName: "default.jpg",
                     })
                 );
-
+    
                 const data = await res.data;
-
+    
                 /* @DESC::  Update with image */
                 if (data?.id && storyImage !== null) {
                     let form = new FormData();
                     form.append("image", storyImage);
-
+    
                     await axios.post(
                         `${UPLOAD_IMAGE_POST_ENDPOINT}/${data.id}`,
-
                         form,
                         {
                             headers: {
@@ -122,6 +124,7 @@ const Write = () => {
                 setPostError("");
                 setPostLoading(false);
                 setPreview("");
+                navigate('/'); // Reindirizza alla home page
             } catch (error: any) {
                 const errorMsg =
                     typeof error === "string"
@@ -137,6 +140,7 @@ const Write = () => {
             toast.error("Per favore seleziona la categoria.");
         }
     };
+    
 
     const buttonDisabled = isLoading || postLoading || !title || !content;
     return (
@@ -144,7 +148,7 @@ const Write = () => {
             <div className="flex w-full justify-center">
                 <div className="h-full pt-24 lg:w-8/12 ">
                     <div className="border-b-2  mb-16">
-                        <Title title="Write your own story" />
+                        <Title title="Scrivi il tuo Articolo: " />
                     </div>
                     <div className="mt-4">
                         <h2 className="text-black mb-1">Immagine</h2>
@@ -156,7 +160,7 @@ const Write = () => {
                     </div>
                     <div className="lg:w-8/12">
                         <Input
-                            label="Story Title"
+                            label="Titolo"
                             onChange={(e) => setTitle(e.target.value)}
                             message={formError.titleError}
                             placeholder="Inserisci Titolo"
@@ -181,14 +185,14 @@ const Write = () => {
 
                     <div className="pt-4 w-12/12 sm:w-6/12 mt-6 ">
                         <Button
-                            title="Publish"
+                            title="Pubblica"
                             disabled={buttonDisabled}
                             loading={postLoading}
                             onClick={handlePublishPost}
                             className="flex items-center justify-center px-8 py-1 border border-black text-md
                     outline-none mt-2 transition-all  hover:shadow-sm active:shadow-md
-                    hover:border-black rounded-full hover:bg-black hover:text-white font-semibold w-full shadow-none bg-transparent
-                     text-gray-600 disabled:cursor-not-allowed"
+                    hover:border-black rounded-full hover:bg-black hover:text-white font-semibold w-full shadow-none 
+                     text-black-600 disabled:cursor-not-allowed"
                         />
                     </div>
                 </div>

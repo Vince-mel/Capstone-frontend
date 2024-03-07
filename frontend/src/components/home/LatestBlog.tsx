@@ -40,7 +40,7 @@ const LatestBlog = () => {
     /* @DESC::  Show Loader */
     if (isLoading) {
         showContent = (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-10 mt-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-10 mt-10">
                 {[1, 2, 3, 4].map((item) => (
                     <VerticalLoader key={item} />
                 ))}
@@ -54,7 +54,7 @@ const LatestBlog = () => {
    
     if (!isLoading && !isError && content.length > 0) {
         showContent = (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-10 mt-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-10 mt-10">
                 {content.map((item) => (
                     <VerticalCard key={item.id} data={item} />
                 ))}
@@ -74,7 +74,7 @@ const LatestBlog = () => {
     return (
         <AnimatePresence>
             <div>
-                <Title title="Ultimi Articoli" />
+                <span><Title title="Ultimi Articoli: " /></span>
                 {showContent}
                 <Pagination
                     pageCount={pageCount}

@@ -45,7 +45,7 @@ const StoryPage = ({ data, loading, error, setData, user }: IProps) => {
         if (data) {
             const updatedComments = data.comments.filter(comment => comment.id !== commentId);
             setData({ ...data, comments: updatedComments });
-            toast.success("Comment deleted!");
+            toast.success("Commento eliminato!");
         }
     } catch (error: any) {
         toast.error(
@@ -200,7 +200,7 @@ const StoryPage = ({ data, loading, error, setData, user }: IProps) => {
                     />
                 </div>
 
-                <div className="pb-12 ">
+                <div className="pb-12 mt-10">
                     <div
                         dangerouslySetInnerHTML={{ __html: data.content }}
                     ></div>

@@ -54,11 +54,11 @@ const Trending = () => {
         trendingPost = <Message message={"Not available right now"} />;
     }
     return (
-        <div className="relative">
+        <div className="relative my-3">
             <Container>
-                <Title title="Articoli di Tendenza:" />
+                <Title  title="Articoli di Tendenza:" />
 
-                <div>
+                <div className="mt-10">
                     <div>{trendingPost}</div>
                 </div>
             </Container>

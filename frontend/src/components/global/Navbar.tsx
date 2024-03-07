@@ -168,7 +168,7 @@ const SearchBar = () => {
             <input
                 value={value}
                 onChange={(e) => setValue(e.target.value)}
-                placeholder="Cerca un articolo"
+                placeholder=""
                 type="text"
                 className="outline-none border-none focus:border-none px-3 w-full rounded-full flex-1 h-full py-2 pl-6 text-sm text-gray-500"
                 style={{ transition: "width 0.3s" }} // Aggiunto stile per la transizione
