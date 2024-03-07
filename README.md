@@ -1,6 +1,6 @@
                                                     THE WAYSTONE
 
-
+![logo](https://github.com/Vince-mel/Capstone-frontend/assets/137229406/441d4150-26fe-4f2a-9670-c801033e35de)
 
                                                     
 The Waystone is a blog app for all those who want to feel part of a community where they can review and give advice by sharing opinions on everything related to the nerd universe, but especially the fantasy genre.
@@ -17,9 +17,11 @@ Posts: Write and update your post and upload an image
 
 Profile: update your bio, update or delete the post
 
+search: search a post whit key characters
+
 Category:  Write posts by categories so that other users can easily find what they're looking for.
 
-Comment: publish comment and delete for  share your opinion
+Comment: post comment and delete for  share your opinion
 
 dashboard: 
 As an admin, you can manage users, categories, activities, and posts.
