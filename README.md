@@ -1,6 +1,5 @@
                                                     THE WAYSTONE
-
-![logo](https://github.com/Vince-mel/Capstone-frontend/assets/137229406/441d4150-26fe-4f2a-9670-c801033e35de)
+continue reading afer logo------> :)![logo](https://github.com/Vince-mel/Capstone-frontend/assets/137229406/441d4150-26fe-4f2a-9670-c801033e35de)
 continue reading------> :)
                                                     
 The Waystone is a blog app for all those who want to feel part of a community where they can review and give advice by sharing opinions on everything related to the nerd universe, but especially the fantasy genre.
