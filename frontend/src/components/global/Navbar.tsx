@@ -41,20 +41,21 @@ const Navbar = () => {
                 className={
                     isHidden
                         ? "hidden"
-                        : " backdrop-blur-xl  top-2 left-0 right-0 bg-gray-700 z-10"
+                        : " backdrop-blur-xl  top-2 left-0 right-0 bg-gray-700/100 z-10"
                 }
             >
                 <div className="flex px-4 md:px-8 justify-between items-center  sm:container mx-auto  ">
                     <div>
                         <Link to={HOME}>
-                            <div>
+                        <div>
+    <img
+        src={images.logo}
+        className="hidden sm:block w-[80px] sm:w-[100px] md:w-[120px] lg:w-[140px]"
+        alt="Waystone"
+    />
+
                                 <img
-                                    src={images.logonav}
-                                    className="hidden sm:block w-[100px] sm:w-[120px] md:w-[140px] lg:w-[200px] "
-                                    alt="Waystone"
-                                />
-                                <img
-                                    src={images.logonav}
+                                    src={images.logo}
                                     className="block sm:hidden w-[40px] mr-3 "
                                     alt="Waystone"
                                 />
@@ -65,9 +66,7 @@ const Navbar = () => {
 
                         
                     </div>
-                    <div>
-                        <SearchBar />
-                    </div>
+                 
 
                     <div className="flex items-center md:flex-row-reverse">
                         {userAvatar}
@@ -134,11 +133,35 @@ const Navbar = () => {
                                         ))}
                                     </ul>
                                 </motion.div>
+                                
+
+
+
                             )}
+
+
+                            
                         </div>
+
+           
+        
+                        
                     </div>
+
+
+                    <div className="flex justify-center items-center py-2">
+                    <SearchBar />
                 </div>
+
+
+
+
+               
+
+                </div>
+                
             </div>
+            
         </nav>
     );
 };

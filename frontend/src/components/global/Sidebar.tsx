@@ -12,9 +12,9 @@ import Title from "./Title";
 const Sidebar = () => {
     return (
         <div className="w-full h-full py-8 text-center px-3 mb-10 lg:px-3 lg:py-3">
-            <Title title="Scopri Altro:" />
+            <Title title="Categorie:" />
             <CategoryButton />
-            <hr />
+            
         </div>
       
     );
