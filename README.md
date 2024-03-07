@@ -15,7 +15,7 @@ User Registration: Create a personal account to access all the app's features an
 
 Posts: Write and update your post and upload an image
 
-Profile: update your bio 
+Profile: update your bio, update or delete the post
 
 Category:  Write posts by categories so that other users can easily find what they're looking for.
 
