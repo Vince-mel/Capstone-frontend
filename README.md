@@ -6,7 +6,7 @@ The Waystone is a blog app for all those who want to feel part of a community wh
 
 Client tecnology: Typescript, React and Redux
 
-Server tecnology: Java, Springboot, JWT and postgresSQL
+Server tecnology: Java, Springboot, JWT and postgreSQL
 
 
 Key Features:
