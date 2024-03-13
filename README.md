@@ -5,6 +5,7 @@ continue reading------> :)
 The Waystone is a blog app for all those who want to feel part of a community where they can review and give advice by sharing opinions on everything related to the nerd universe, but especially the fantasy genre.
 
 Client tecnology: Typescript, React and Redux
+
 Server tecnology: Java, Springboot, JWT and postgresSQL
 
 
