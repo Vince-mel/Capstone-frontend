@@ -30,8 +30,7 @@ As an admin, you can manage users, categories, activities, and posts.
 Installation
 1- Clone the repository:
 
-bash $ git clone [https://github.com/iam-Igor/food2you.git
-](https://github.com/Vince-mel/Capstone-frontend.git)
+bash $ git clone https://github.com/Vince-mel/Capstone-frontend.git)
 2- Navigate to the project directory:
 
 bash $cd frontend
@@ -53,7 +52,7 @@ Server configuration
 Go to https://github.com/Vince-mel/Capstone-backend.git and download the zip file for the server configuration, read the readme file for knowledges about server usage and configuration
 
 Contributing
-If you'd like to contribute to the development of the Food2You App, follow these steps:
+If you'd like to contribute follow these steps:
 
 1- Fork the repository.
 
